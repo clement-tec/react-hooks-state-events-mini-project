@@ -2,9 +2,8 @@ import React from "react";
 
 function Task({text, category, handleDelete}) {
   const handleClick = () => {
-    handleDelete(text)
+    handleDelete(text); 
   }
-
   return (
     <div className="task">
       <div className="label">{category}</div>

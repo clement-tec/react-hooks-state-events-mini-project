@@ -1,21 +1,21 @@
- import React from "react";
+import React from "react";
 import Task from "./Task"
 
 function TaskList({tasks, handleDelete}) {
-  const taskList = tasks.map(task =>(
-    <Task 
+  const tasksList = tasks.map(task => (
+    <Task
     text= {task.text}
-    category= {task.category} 
-    key = {task.key}
-    handleDelete = {handleDelete}
+    category= {task.category}
+    key= {task.text}
+    handleDelete= {handleDelete}
     />
   ))
 
   return (
     <div className="tasks">
-      {taskList}
+      {tasksList}
     </div>
   );
 }
 
-export default TaskList;
+export default TaskList

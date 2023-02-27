@@ -2,19 +2,13 @@ import React from "react";
 
 function CategoryFilter({categories, selectCategory, handleSelectCategory}) {
 
-  // const handleCategory = (category) => {
-  //   handleSelectCategory(category)
-  // }
-
   const categoryButtons = categories.map(category => (
-    <button key = {category} 
-    onClick={() => handleSelectCategory(category)}
-    className= {category === selectCategory ? 'selected' : null}
-    >
-      {category}
-    </button>
+    <button key= {category}
+    onClick ={() => handleSelectCategory(category)}
+    className={category === selectCategory? 'selected' : null}
+    >{category}</button> 
   ))
- 
+
   return (
     <div className="categories">
       <h5>Category filters</h5>
@@ -24,4 +18,3 @@ function CategoryFilter({categories, selectCategory, handleSelectCategory}) {
 }
 
 export default CategoryFilter;
-
